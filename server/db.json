@@ -1,3 +1,10 @@
 {
-    "profile": []
+  "profile": [
+    {
+      "hostname": "localhost",
+      "username": "sky@gmail.com",
+      "password": "U2FsdGVkX1/Q3swgEP4YWZiFirj/4VsactVVHfUOQyE=",
+      "id": 1
+    }
+  ]
 }

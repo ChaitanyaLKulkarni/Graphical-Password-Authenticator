@@ -106,6 +106,9 @@ function main() {
     const passEls = form.querySelectorAll(
         "input[type=password],input[name=password]"
     );
+
+    form.addEventListener("submit", onFormSubmit);
+
     if (passEls.length > 1) {
         if (!confirm("set random secure password?")) return;
         profile.password = generateRandomPass(10);
@@ -115,7 +118,6 @@ function main() {
         });
         return;
     }
-    form.addEventListener("submit", onFormSubmit);
 
     console.log("Calling API", { hostname });
     chrome.runtime.sendMessage({ type: "get_data", hostname }, (response) => {
