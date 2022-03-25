@@ -1,0 +1,26 @@
+{
+    "name": "GPA",
+    "description": "Graphical password Authenticator",
+    "version": "0.1.0",
+    "manifest_version": 3,
+    "icons": {},
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["contentScript.js"],
+            "run_at": "document_end"
+        }
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": ["validatePattern.html", "validatePattern.js"],
+            "matches": ["http://*/*", "https://*/*"]
+        }
+    ],
+    "incognito": "spanning",
+    "permissions": ["activeTab", "scripting", "tabs"],
+    "host_permissions": ["<all_urls>"]
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pattern</title>
+        <style>
+            .pattern-container {
+                width: 100%;
+                height: 100%;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                align-content: center;
+                align-items: center;
+                grid-gap: 10px;
+            }
+            .img {
+                width: 100%;
+                cursor: pointer;
+            }
+            .img.selected {
+                border: 2px solid red;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="pattern-container"></div>
+        <script src="/lib/cryptoJS/crypto-js.min.js"></script>
+        <script src="/lib/cryptoJS/aes.min.js"></script>
+        <script src="/lib/cryptoJS/pbkdf2.min.js"></script>
+        <script src="validatePattern.js"></script>
+    </body>
+</html>
